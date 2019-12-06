@@ -1,0 +1,198 @@
+@media print {
+    body {
+        text-align: center;
+    }
+
+    section::before,
+    .tm-sidebar,
+    .tm-team-img,
+    .gallery-container,
+    .heading .text::after,
+    .carousel-indicators,
+    .img-contact-us,
+    #contact {
+        display: none;
+    }
+
+    p.tm-section-description {
+        text-indent: 0;
+        line-height: 23px;
+    }
+
+    .tm-banner {
+        padding-top: 0; 
+    }
+
+    .tm-content-box {
+        margin-bottom: 8px;
+    }
+
+    .tm-main-content,
+    .padding-medium,
+    .tm-content-box,
+    .tm-footer {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    .tm-team-description-container {
+        max-width: 100%;
+    }
+
+    .tm-section-title {
+        text-transform: uppercase;
+    }
+    
+    .heading ol {
+        padding-left: 0; 
+    }
+
+    .heading li {
+        list-style-type: none;
+    }
+
+    .heading {
+        padding: 0 150px;
+    }
+
+    .heading h2 {
+        font-weight: 300;
+    }
+
+    .heading ol li:nth-child(odd) {
+        text-align: right;
+    }
+
+    .heading ol li:nth-child(even) {
+        text-align: left;
+    }
+}
+
+.tm-section-description {
+    text-indent: 20px;
+    line-height: 30px;
+}
+
+.tm-sidebar,
+#home, 
+section {
+    box-shadow: 0 0 10px 0  rgba(61, 55, 61, 0.7);
+}
+
+section::before {
+    position: absolute;
+    content: "";
+	border-top: 40px solid lightskyblue; 
+	border-right: 40px solid transparent;
+}
+
+.tm-nav-item-link:hover {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+.tm-banner {
+    background: linear-gradient(to right, lightskyblue, burlywood);
+}
+
+.tm-banner-inner {
+    background-color: #fff;
+}
+
+.tm-banner-text {
+    text-shadow: 5px 5px 3px #333;
+    animation-name: slide;
+    animation-duration: 3s; 
+    animation-timing-function: ease-out; 
+}
+
+@keyframes slide {
+    0% {transform: translateX(200px);}       
+    100% {transform: translateX(0px);}
+}
+
+.flex-2-col {
+    display: flex;
+}
+
+.flex-2-col .tm-section-title {
+    text-align: center;
+}
+
+.flex-2-col .tm-team-description-container {
+    margin: auto 0;
+}
+
+#about .box-bg:hover {
+    background-color: lightgray;
+    font-style: italic;
+}
+
+.heading h2 {
+    color: lightskyblue;
+    text-align: center;
+}
+
+.heading ol {
+    list-style-type: lower-alpha;
+}
+
+.heading ol li:hover::before {
+    content: ">";
+    font-weight: bold;
+}
+
+.heading .text::after {
+    content: "New";
+    position: absolute;
+    font-size: .6em;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: red;
+}
+
+.blocks .tm-section-description:nth-child(3) {
+    font-style: italic;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+.blocks .gallery-container .box {
+    padding: 10px;
+}
+
+.blocks .gallery-container p {
+    font-style: italic;
+}
+
+.blocks .gallery-container p:first-letter {
+    font-weight: bold;
+}
+
+.blocks .gallery-container .box:nth-child(odd) {
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+#contact input {
+    border-color: transparent;
+    border-bottom: 1px solid lightskyblue;
+}
+
+#contact input:focus {
+    background-color: lightskyblue;
+}
+
+#contact textarea {
+    border: 1px solid lightskyblue;
+    background: url("/img/email-icon.png") bottom 10px right 10px no-repeat;
+    background-size: 30px;
+}
+
+.btn {
+    float: right;
+    padding: 15px 25px;
+    background-color: #fff;
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
