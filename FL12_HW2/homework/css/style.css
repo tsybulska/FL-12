@@ -16,7 +16,7 @@
 
     p.tm-section-description {
         text-indent: 0;
-        line-height: 23px;
+        line-height: 25px;
     }
 
     .tm-banner {
@@ -52,7 +52,8 @@
     }
 
     .heading {
-        padding: 0 150px;
+        margin: auto;
+        max-width: 375px;
     }
 
     .heading h2 {
@@ -185,7 +186,7 @@ section::before {
 
 #contact textarea {
     border: 1px solid lightskyblue;
-    background: url("/img/email-icon.png") bottom 10px right 10px no-repeat;
+    background: url("../img/email-icon.png") bottom 10px right 10px no-repeat;
     background-size: 30px;
 }
 
