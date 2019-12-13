@@ -1,0 +1,215 @@
+@mixin btn($accent1) {
+    background-color: $accent1;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #fff;
+    width: 125px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@mixin link1() {
+    color: #fff;
+    font-size: 16px;
+}
+
+@mixin link2($text-c){
+    font-size: 12px;
+    color: $text-c;
+}
+
+@mixin pseudo {
+    content: "";
+    position: absolute;
+    background-color: $pseudo-bg;
+    z-index: -1;
+}
+
+@mixin text($text-f, $text-c) {
+    text-align: justify;
+    font-family: $text-f;
+    color: $text-c;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $bg-c;
+    font-family: map-get($fonts, "Source"), sans-serif;
+}
+
+.landing-logo {
+    display: flex;
+    padding: 15px 0;
+    p {
+        display: flex;
+        flex-direction: column;
+        margin: auto 15px;
+        font-family: $text-f;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.1;
+        span {
+            text-align: center;
+            font-size: 10px;
+        }
+    }
+}
+
+.header {
+    background-image: $header-img;
+    background-size: cover;
+    background-position: center;
+    border-bottom-right-radius: 650px 250px;
+    color: $header-c;
+    .header-wrap {
+        width: 80%;
+        margin: 0 auto;
+        .header_heading {
+            width: 50%;
+            font-size: 63px;
+            font-weight: bold;
+            line-height: 1em;
+            margin: 40px 0 30px;
+            position: relative;
+            z-index: 2;
+            &::before {
+                @include pseudo();
+                top: 80px;
+                left: 0;
+                width: 265px;
+                height: 45px;
+            }
+        }
+        .header_text {
+            font-size: 14px;
+            white-space: pre-line;
+            font-family: map-get($fonts, "Hind"), sans-serif;
+            line-height: 1.6em;
+        }
+        .header_button {
+            @include btn($accent1);
+            margin: 50px 130px 150px 0; 
+        }
+        .login {
+            @include link1;
+        }
+    }
+}
+
+.section {
+    .section_text {
+        width: 60%;
+        margin: 35px auto;
+        text-align: center;
+        font-size: 37px;
+        font-weight: 600;
+        color: $header-c;
+        position: relative;
+        z-index: 2;
+        &::before {
+            @include pseudo();
+            top: 0;
+            left: 51%;
+            width: 165px;
+            height: 45px;
+        }
+    }
+    .section_card_wrap {
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .section_card {
+            display: flex;
+            padding: 20px 0 20px 20px;
+            background-color: $section-bg;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            .section_card_img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+            }
+            .section_card_right_container {
+                padding: 35px 0 35px;
+                text-align: center;
+                color: #fff;
+                .section_card_heading {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .section_card_text {
+                    @include text($text-f, $text-c);
+                    padding: 40px 80px 15px;
+                }
+                .section_link {
+                    @include link2($text-c);
+                }
+            }
+        }
+    }
+    .section_banner {
+        display: flex;
+        justify-content: space-between;
+        width: 65%;
+        margin: 0 auto;
+        transform: translateY(65px);
+        border-radius: 3px;
+        padding: 10px 140px;
+        background: linear-gradient(45deg, $accent1, $accent2);
+        .section_banner_text_wrap {
+            padding: 20px 0;
+            .section_banner_heading {
+                font-size: 26px;
+                font-weight: bold;
+                color: $header-c;
+                position: relative;
+                z-index: 2;
+                &::before {
+                    @include pseudo();
+                    top: -5px;
+                    left: 105px;
+                    width: 55px;
+                    height: 40px;
+                }
+            }
+            .section_banner_text {
+                @include text($text-f, $text-c);
+                padding: 10px 0 0;
+            }
+        }
+        .section_banner_button {
+            @include btn($accent1);
+            margin: auto 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $section-bg;
+    .footer-wrap {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        @include text($text-f, $text-c);
+        padding: 110px 0 40px;
+        text-align: left;
+        .footer-cr {
+            margin: auto 0;
+        }
+        .footer_text {
+            @extend .footer-cr;
+            width: 20%;
+            font-size: 12px;
+        }
+    }
+}
