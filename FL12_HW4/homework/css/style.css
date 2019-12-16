@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  color: #000;
+  background-color: #fff; }
+
+#header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  #header .header-wrap {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between; }
+    #header .header-wrap .header-logo {
+      text-decoration: none;
+      color: #777;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px; }
+    #header .header-wrap .header-nav {
+      margin: auto 0; }
+      #header .header-wrap .header-nav ul li {
+        display: inline-block;
+        padding: 0 20px;
+        font-size: 18px; }
+        #header .header-wrap .header-nav ul li .active {
+          color: #bfba55; }
+        #header .header-wrap .header-nav ul li a {
+          text-decoration: none;
+          color: #777; }
+          #header .header-wrap .header-nav ul li a:hover {
+            color: #bfba55; }
+
+#banner {
+  height: 101vh;
+  text-align: center;
+  background: url(../img/home-bg.jpg) center 85px no-repeat;
+  background-size: cover;
+  position: relative; }
+  #banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.7; }
+  #banner .banner-wrap {
+    position: relative;
+    top: 45%; }
+    #banner .banner-wrap .banner-subtitle {
+      font-size: 72px;
+      color: #fff; }
+    #banner .banner-wrap .banner-title {
+      font-size: 14px;
+      color: #bfba55;
+      padding: 20px 0 50px;
+      letter-spacing: 2px;
+      font-weight: bold; }
+    #banner .banner-wrap .banner-btn {
+      display: inline-block;
+      border-radius: 30px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #777;
+      padding: 1rem 1.2rem;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 600; }
+
+.gallery {
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px 0; }
+  .gallery .content {
+    padding: 80px 0;
+    font-size: 18px; }
+    .gallery .content .content-img {
+      display: block;
+      max-width: 100%;
+      height: auto; }
+    .gallery .content .content-title {
+      padding: 40px 0 15px;
+      font-size: 28px; }
+    .gallery .content .content-about {
+      display: flex;
+      padding-bottom: 20px; }
+      .gallery .content .content-about * {
+        margin: auto 0; }
+      .gallery .content .content-about .content-about-img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px; }
+      .gallery .content .content-about .content-about-text {
+        margin-right: 20px; }
+    .gallery .content .content-text {
+      padding-bottom: 40px;
+      line-height: 1.5em;
+      color: #777; }
+    .gallery .content .content-btn {
+      display: inline-block;
+      border-radius: 30px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+      color: #777;
+      padding: 1rem 2rem;
+      font-size: 18px; }
+  .gallery .content + .content {
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+#footer {
+  background-color: #000; }
+  #footer .footer-wrap {
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    padding: 100px 0; }
+    #footer .footer-wrap .footer-title,
+    #footer .footer-wrap .footer-text {
+      padding-bottom: 20px; }
+      #footer .footer-wrap .footer-title:last-child,
+      #footer .footer-wrap .footer-text:last-child {
+        padding: 0; }
+    #footer .footer-wrap .footer-item {
+      width: 60%; }
+      #footer .footer-wrap .footer-item .footer-text-main {
+        width: 70%;
+        line-height: 1.5em; }
+    #footer .footer-wrap .footer-contact a {
+      text-decoration: none;
+      color: #777; }
+    #footer .footer-wrap .footer-title {
+      color: #FFFFFF;
+      font-size: 28px;
+      font-weight: bold; }
+    #footer .footer-wrap .footer-text {
+      color: #777;
+      font-size: 18px;
+      padding-bottom: 20px; }
