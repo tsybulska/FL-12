@@ -18,7 +18,8 @@ body {
     margin: 0 auto;
     padding: 30px 0;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     #header .header-wrap .header-logo {
       text-decoration: none;
       color: #777;
@@ -26,19 +27,17 @@ body {
       font-size: 24px;
       font-weight: bold;
       letter-spacing: 2px; }
-    #header .header-wrap .header-nav {
-      margin: auto 0; }
-      #header .header-wrap .header-nav ul li {
-        display: inline-block;
-        padding: 0 20px;
-        font-size: 18px; }
-        #header .header-wrap .header-nav ul li .active {
+    #header .header-wrap .header-nav ul li {
+      display: inline-block;
+      padding: 0 20px;
+      font-size: 18px; }
+      #header .header-wrap .header-nav ul li .active {
+        color: #bfba55; }
+      #header .header-wrap .header-nav ul li a {
+        text-decoration: none;
+        color: #777; }
+        #header .header-wrap .header-nav ul li a:hover {
           color: #bfba55; }
-        #header .header-wrap .header-nav ul li a {
-          text-decoration: none;
-          color: #777; }
-          #header .header-wrap .header-nav ul li a:hover {
-            color: #bfba55; }
 
 #banner {
   height: 101vh;
@@ -96,9 +95,8 @@ body {
       font-size: 28px; }
     .gallery .content .content-about {
       display: flex;
+      align-items: center;
       padding-bottom: 20px; }
-      .gallery .content .content-about * {
-        margin: auto 0; }
       .gallery .content .content-about .content-about-img {
         width: 40px;
         height: 40px;
