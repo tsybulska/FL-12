@@ -38,35 +38,43 @@ const structure = [
 const rootNode = document.getElementById('root');
 
 // Todo: your code goes here
+function createTree(structure) {
+  let main = document.createElement('ul');
 
-function createTree(node, structure) {
-  let ul = document.createElement('ul');
-  for (let el of structure){
+  for (let el of structure) {
     let li = document.createElement('li'),
-    div = document.createElement('div'),
     icon = document.createElement('i'),
     span = document.createElement('span');
     icon.classList.add('material-icons');
     span.innerHTML = el.title;
-    ul.appendChild(li);
-    li.appendChild(div);
-    div.appendChild(icon);
-    div.appendChild(span);
+    main.appendChild(li);
+    li.appendChild(icon);
+    li.appendChild(span);
+
     if (el.folder) {
+      let ul = document.createElement('ul');
+      ul.classList.add('close');
       icon.innerHTML = 'folder';
+      main.appendChild(ul);
+
+      icon.addEventListener('click', function() {
+        ul.classList.toggle('close');
+        icon.innerHTML === 'folder' ? icon.innerHTML = 'folder_open' : icon.innerHTML = 'folder';
+      });
+
+      if (el.children) {
+        ul.appendChild(createTree(el.children));
+      } else {
+        let empty = document.createElement('span');
+        empty.classList.add('empty');
+        empty.innerHTML = 'Folder is empty';
+        ul.appendChild(empty);
+      }
     } else {
       icon.classList.add('insert_drive_file');
       icon.innerHTML = 'insert_drive_file';
     }
-    if (el.children) {
-      createTree(ul, el.children);
-    } else if (el.children === false || el.children === null) {
-      let empty = document.createElement('span');
-      empty.classList.add('empty');
-      empty.innerHTML = 'Folder is empty';
-      li.appendChild(empty);
-    }
   }
-  node.appendChild(ul);
+  return main;
 }
-createTree(rootNode, structure);
+rootNode.appendChild(createTree(structure));
