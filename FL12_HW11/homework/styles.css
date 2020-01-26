@@ -1,0 +1,31 @@
+#root {
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    padding: 0 0 0 20px;
+}
+ul li div:hover {
+    background-color: #efefef;
+}
+i {
+    color: #edbc0b;
+    vertical-align: middle;
+}
+span {
+    vertical-align: middle;
+    font-size: 1.3em;
+    padding-left: 5px;
+}
+.insert_drive_file {
+    color: #bbbbbb;
+}
+.empty {
+    font-style: italic;
+}
+.close {
+    display: none;
+}
+.open {
+    display: block;
+}
