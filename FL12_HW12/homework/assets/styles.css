@@ -1,2 +1,15 @@
-/* Your styles go here */
-
+.open {
+    display: block;
+}
+.close {
+    display: none;
+}
+.input {
+    margin: 10px 10px 10px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.button {
+    margin: 10px 10px 10px 0;
+    width: 120px;
+}
